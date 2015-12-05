@@ -44,4 +44,14 @@ class Book extends CI_Controller {
         );
         $this->load->view('main_layout',$data);
     }
+
+    public function edit($book_id){
+        $old_details = $this->BookModel->getById($book_id);
+        $data = array(
+            'title'=> 'Edit Book | '.$old_details['id'],
+            'view_file' => 'book/edit',
+            'old_details' => $old_details
+        );
+        $this->load->view('main_layout',$data);
+    }
 }
