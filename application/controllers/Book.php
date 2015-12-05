@@ -26,7 +26,13 @@ class Book extends CI_Controller {
     }
 
     public function index(){
-        echo 'list of all the books';
+        $books = $this->BookModel->getAll();
+        $data = array(
+            'title'=>'Books',
+            'view_file'=>'book/books_list',
+            'books'=>$books
+        );
+        $this->load->view('main_layout',$data);
     }
 
 }

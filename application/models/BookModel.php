@@ -11,4 +11,9 @@ class BookModel extends CI_Model{
     public function save($data){
         $this->db->insert($this->table, $data);
     }
+
+    public function getAll(){
+        $query = $this->db->get($this->table);
+        return $query->result_array();
+    }
 }
