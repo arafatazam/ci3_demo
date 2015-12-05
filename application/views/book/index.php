@@ -1,4 +1,5 @@
 <h1>Books</h1>
+<a class="btn btn-info btn-large" href="<?php echo site_url(); ?>">Home</a>
 <a class="btn btn-success btn-large" href="<?php echo site_url('book/create'); ?>">Add New Book</a>
 <table class="table table-striped">
     <thead>

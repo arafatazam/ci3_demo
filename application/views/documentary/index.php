@@ -1,4 +1,5 @@
 <h1>Documentaries</h1>
+<a class="btn btn-info btn-large" href="<?php echo site_url(); ?>">Home</a>
 <a class="btn btn-success btn-large" href="<?php echo site_url('documentary/create'); ?>">Add New Documentary</a>
 <table class="table table-striped">
     <thead>
