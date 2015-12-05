@@ -21,4 +21,9 @@ class BookModel extends CI_Model{
         $query = $this->db->get_where($this->table, array('id' => $id));
         return $query->result_array()[0];
     }
+
+    public function updateById($id,$data){
+        $this->db->where('id', $id);
+        $this->db->update($this->table, $data);
+    }
 }

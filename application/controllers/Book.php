@@ -54,4 +54,14 @@ class Book extends CI_Controller {
         );
         $this->load->view('main_layout',$data);
     }
+
+    public function update($book_id){
+        $data = array(
+            'name' => $this->input->post('name'),
+            'author' => $this->input->post('author'),
+            'stock' => $this->input->post('stock')
+        );
+        $this->BookModel->updateById($book_id,$data);
+        redirect(site_url('book'));
+    }
 }
