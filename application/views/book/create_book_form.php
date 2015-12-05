@@ -1,6 +1,6 @@
 <h1>Add New Book</h1>
 
-<?php echo form_open('book/store')?>
+<?php echo form_open(site_url('book/store'))?>
     <div class="form-group">
         <label for="name">Book Name:</label>
         <input type="text" class="form-control" name="name" id="name" placeholder="Input Book Name">
