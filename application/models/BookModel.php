@@ -1,34 +1,12 @@
 <?php
-class BookModel extends CI_Model{
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-    protected $table;
+include('BaseModel.php');
+
+class BookModel extends BaseModel{
 
     public function __construct(){
-        parent::__construct();
-        $this->table = 'books';
-    }
-
-    public function save($data){
-        $this->db->insert($this->table, $data);
-    }
-
-    public function getAll(){
-        $query = $this->db->get($this->table);
-        return $query->result_array();
-    }
-
-    public function getById($id){
-        $query = $this->db->get_where($this->table, array('id' => $id));
-        return $query->result_array()[0];
-    }
-
-    public function updateById($id,$data){
-        $this->db->where('id', $id);
-        $this->db->update($this->table, $data);
-    }
-
-    public function deleteById($id){
-        $this->db->where('id', $id);
-        $this->db->delete($this->table);
+        $table = 'books';
+        parent::__construct($table);
     }
 }
