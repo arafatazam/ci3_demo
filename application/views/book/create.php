@@ -13,5 +13,6 @@
         <label for="stock">Stock:</label>
         <input type="text" class="form-control" name="stock" id="stock" placeholder="Quantity in stock">
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <a class="btn btn-warning" href="<?php echo site_url('book'); ?>">Cancel</a>
+    <button type="submit" class="btn btn-success">Save</button>
 </form>
