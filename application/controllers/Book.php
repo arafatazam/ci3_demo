@@ -11,7 +11,7 @@ class Book extends CI_Controller {
     public function create(){
         $data = array(
             'title'=>'Create new Book',
-            'view_file' => 'book/create_book_form'
+            'view_file' => 'book/create'
         );
         $this->load->view('main_layout',$data);
     }
@@ -29,7 +29,7 @@ class Book extends CI_Controller {
         $books = $this->BookModel->getAll();
         $data = array(
             'title'=>'Books',
-            'view_file'=>'book/books_list',
+            'view_file'=>'book/index',
             'books'=>$books
         );
         $this->load->view('main_layout',$data);
