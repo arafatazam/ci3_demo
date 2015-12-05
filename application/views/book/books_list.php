@@ -14,7 +14,7 @@
             <td><?php echo $book['id'];?></td>
             <td><?php echo $book['name'];?></td>
             <td>
-                <a class="btn btn-info" href="#">View</a>
+                <a class="btn btn-info" href="<?php echo site_url('book/show/'.$book['id'])?>">View</a>
                 <a class="btn btn-warning" href="#">Edit</a>
                 <a class="btn btn-danger" href="#">Delete</a>
             </td>

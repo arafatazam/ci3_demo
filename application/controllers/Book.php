@@ -35,4 +35,13 @@ class Book extends CI_Controller {
         $this->load->view('main_layout',$data);
     }
 
+    public function show($book_id){
+        $book = $this->BookModel->getById($book_id);
+        $data = array(
+            'title' => 'Book | '.$book['id'],
+            'view_file' => 'book/show',
+            'book' => $book
+        );
+        $this->load->view('main_layout',$data);
+    }
 }
