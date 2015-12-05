@@ -64,4 +64,9 @@ class Book extends CI_Controller {
         $this->BookModel->updateById($book_id,$data);
         redirect(site_url('book'));
     }
+
+    public function destroy($book_id){
+        $this->BookModel->deleteById($book_id);
+        redirect(site_url('book'));
+    }
 }

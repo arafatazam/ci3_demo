@@ -16,7 +16,7 @@
             <td>
                 <a class="btn btn-info" href="<?php echo site_url('book/show/'.$book['id'])?>">View</a>
                 <a class="btn btn-warning" href="<?php echo site_url('book/edit/'.$book['id'])?>">Edit</a>
-                <a class="btn btn-danger" href="#">Delete</a>
+                <a class="btn btn-danger" href="<?php echo site_url('book/destroy/'.$book['id'])?>">Delete</a>
             </td>
         </tr>
     <?php endforeach; ?>

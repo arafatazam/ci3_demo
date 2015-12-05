@@ -26,4 +26,9 @@ class BookModel extends CI_Model{
         $this->db->where('id', $id);
         $this->db->update($this->table, $data);
     }
+
+    public function deleteById($id){
+        $this->db->where('id', $id);
+        $this->db->delete($this->table);
+    }
 }
